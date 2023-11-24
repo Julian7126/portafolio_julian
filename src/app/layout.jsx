@@ -1,5 +1,5 @@
 import '../styles/globals.css'
-import NavBar from './components/NavBar/page.jsx';
+import NavBar from '../components/NavBar/index.jsx';
 import Head from 'next/head';
 import { DM_Sans } from 'next/font/google'
 
