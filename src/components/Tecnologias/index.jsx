@@ -69,38 +69,43 @@ const Tecnologias = () => {
 
   return (
     <div className="w-full p-5">
-      <h2 className="text-center mb-4 text-3xl p-2 ">Technologies Skills</h2>
+      <h2 className="text-center mb-4 text-3xl p-2 sm:text-4xl md:text-5xl lg:text-6xl">Technologies Skills</h2>
+
+      {/* Primer Carrusel */}
       <Slider {...settings} className="mx-auto p-5 mt-10">
         {carouselData1.map((item) => (
           <div key={item.id} className="carousel-column">
-            <img src={item.src} alt={`Tecnologia ${item.id}`} className="mx-auto max-w-full h-auto max-h-32 " />
+            <img src={item.src} alt={`Tecnologia ${item.id}`} className="mx-auto max-w-full h-auto max-h-32" />
           </div>
         ))}
       </Slider>
 
-      <div className="my-16" />
-      
-      <Slider {...settings} className="mx-auto mt-25">
+      <div className="my-8" />
+
+      {/* Segundo Carrusel */}
+      <Slider {...settings} className="mx-auto mt-10">
         {carouselData2.map((item) => (
           <div key={item.id} className="carousel-column">
-            <img src={item.src} alt={`Tecnologia ${item.id}`} className="mx-auto max-w-full h-auto max-h-32 " />
+            <img src={item.src} alt={`Tecnologia ${item.id}`} className="mx-auto max-w-full h-auto max-h-32" />
           </div>
         ))}
       </Slider>
 
-      <div className="my-16" />
+      <div className="my-8" />
 
+      {/* Tercer Carrusel */}
       <Slider {...settings} className="mx-auto p-5">
         {carouselData3.map((item) => (
           <div key={item.id} className="carousel-column">
-            <img src={item.src} alt={`Tecnologia ${item.id}`} className="mx-auto max-w-full h-auto max-h-32 " />
+            <img src={item.src} alt={`Tecnologia ${item.id}`} className="mx-auto max-w-full h-auto max-h-32" />
           </div>
         ))}
       </Slider>
 
-      <h2 className="text-center mt-4 text-3xl p-10 ">Specialized in covering many areas</h2>
+      <h2 className="text-center mt-4 text-3xl p-5 sm:text-4xl md:text-5xl lg:text-6xl">Specialized in covering many areas</h2>
     </div>
   );
 };
+
 
 export default Tecnologias;
