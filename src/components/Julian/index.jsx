@@ -19,11 +19,11 @@ const Julian = () => {
                 <div className="w-1/2 ml-4">
                     {/* Título y texto */}
                     <h1 className="text-8xl font-bold mb-2 justify-between p-12">
-                        Hi, I'm Julian Bischoff
+                        Hi, Im Julian Bischoff
                     </h1>
                     <p className="text-2xl mb-4 justify-center p-10 m-5">
-                        Welcome to my digital corner! Specialized for the creation of
-                        successful web sites.
+                    Welcome to my digital corner! Specialized for the creation of
+                    successful web sites.
                     </p>
                     {/* Flecha hacia abajo */}
                 </div>
