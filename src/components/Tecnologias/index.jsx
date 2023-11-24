@@ -11,7 +11,7 @@ const Tecnologias = () => {
     { id: 3, src: './sass_icon_130835.svg' },
     { id: 4, src: './handlebars.svg' },
     { id: 5, src: './react.svg' },
-    { id: 6, src: './next_js_logo_icon_145038.svg' },
+    { id: 6, src: './nextjs.svg' },
   ];
 
   const carouselData2 = [
