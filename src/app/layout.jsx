@@ -3,7 +3,6 @@ import NavBar from '../components/NavBar/index.jsx';
 import Head from 'next/head';
 import { DM_Sans } from 'next/font/google'
 
-
 export const metadata = {
   title: "Julian Bischoff",
 };
@@ -16,9 +15,7 @@ const fonts = DM_Sans({
 })
 
 
-
-
-const Layout = ({ children }) => {
+const Layout = ({ children  }) => {
   return (
     <>  
       <html lang="en" className={fonts.className}>

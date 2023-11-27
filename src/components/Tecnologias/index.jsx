@@ -67,9 +67,18 @@ const Tecnologias = () => {
     ],
   };
 
+
+  const settingsSecondCarousel = {
+    ...settings,
+    rtl: true, 
+  };
+  
+
   return (
     <div className="w-full p-5">
-      <h2 className="text-center mb-4 text-3xl p-2 sm:text-4xl md:text-5xl lg:text-6xl">Technologies Skills</h2>
+      <div className="bg-gray-400 h-1 w-full" />
+      <br />
+      <h2 className="text-center mb-4 text-3xl p-2 sm:text-4xl md:text-5xl lg:text-4xl">Technologies Skills</h2>
 
       {/* Primer Carrusel */}
       <Slider {...settings} className="mx-auto p-5 mt-10">
@@ -83,7 +92,7 @@ const Tecnologias = () => {
       <div className="my-8" />
 
       {/* Segundo Carrusel */}
-      <Slider {...settings} className="mx-auto mt-10">
+      <Slider {...settingsSecondCarousel} className="mx-auto mt-10">
         {carouselData2.map((item) => (
           <div key={item.id} className="carousel-column">
             <img src={item.src} alt={`Tecnologia ${item.id}`} className="mx-auto max-w-full h-auto max-h-32" />
@@ -102,8 +111,17 @@ const Tecnologias = () => {
         ))}
       </Slider>
 
-      <h2 className="text-center mt-4 text-3xl p-5 sm:text-4xl md:text-5xl lg:text-6xl">Specialized in covering many areas</h2>
+      <h2 className="text-center mt-4 text-3xl p-5 sm:text-4xl md:text-5xl lg:text-2xl">Specialized in covering many areas</h2>
+      <br />
+     
+      <div className="bg-gray-400 h-1 w-full" />
+          
+          
+
+
+
     </div>
+    
   );
 };
 
