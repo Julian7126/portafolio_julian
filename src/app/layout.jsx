@@ -15,7 +15,7 @@ const fonts = DM_Sans({
 })
 
 
-const Layout = ({ children  }) => {
+const Layout = ({children}) => {
   return (
     <>  
       <html lang="en" className={fonts.className}>
