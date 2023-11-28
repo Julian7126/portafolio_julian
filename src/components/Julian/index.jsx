@@ -32,7 +32,7 @@ const Julian = () => {
 
         {/* Sección del texto y la flecha */}
         <motion.div
-          className=" w-1/8 flex text-7xl mt-10"
+          className=" w-1/8 flex text-7xl mt-10 text-purple-300 "
           //animacion para la flecha que venga de arriba}
           initial={{ opacity: 0, y: -350 }}
           animate={{ opacity: 1, y: -60 }}

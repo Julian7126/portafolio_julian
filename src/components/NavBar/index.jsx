@@ -17,13 +17,14 @@ const NavBar = () => {
   return (
 <div className="w-full h-9 md:h-16 flex-shrink-0 flex items-center p-8">
   {/* Logo */}
-  < motion.div
-     whileHover={{ scale: 1.1 }}
-     whileTap={{ scale: 2 }}
-  
-  className="flex-shrink-0 mx-auto p-4 mt-10">
-    < Link  href="/" className="text-black font-dm-sans font-bold text-6xl leading-120 tracking-tight">
-      jb.
+  <motion.div
+    whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 2 }}
+    className="flex-shrink-0 mx-auto p-4 mt-10"
+  >
+    <Link href="/" className="text-black font-dm-sans font-bold text-6xl leading-120 tracking-tight">
+      jb
+      <span className="bg-purple-300 text-transparent bg-clip-text">.</span>
     </Link>
   </motion.div>
 
