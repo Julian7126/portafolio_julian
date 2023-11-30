@@ -1,6 +1,7 @@
 "use client";
 
 import AboutMe from "@/components/AboutMe";
+import Certificados from "@/components/Certificados";
 import Julian from "@/components/Julian";
 import Social from "@/components/Social";
 import Tecnologias from "@/components/Tecnologias";
@@ -8,18 +9,6 @@ import { motion } from "framer-motion";
 
 
 const Pages = () => {
-  // const ref = useRef(null);
-  // const isInView = useInView(ref ,{once:true});
-
-  // const mainControls = useAnimation();
-
-  // useEffect(()=>{
-  //   if(isInView){
-  //     mainControls.start("visible");
-  //   }
-  //   console.log(isInView)
-
-  // },[isInView])
 
   return (
     <motion.div
@@ -31,6 +20,7 @@ const Pages = () => {
       <Tecnologias />
       <AboutMe/>
       <Social/>
+      <Certificados/>
 
 
     </motion.div>

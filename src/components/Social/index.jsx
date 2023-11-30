@@ -13,14 +13,22 @@ const Social = () => {
 
   return (
     <>
-      <div className="bg-purple-300 h-1 mt-6" />
-      <br />
-      <h2 className="text-center mb-4 text-3xl p-2 sm:text-4xl md:text-5xl lg:text-4xl">
-        Social Media
+       
+      <br className="p-9" />
+      <h2 className="text-center mb-4 text-3xl p-1 sm:text-4xl md:text-5xl lg:text-4xl font-bold text-purple-700 m-8">
+        Explore My Social Media
       </h2>
+      <p className="text-center text-lg text-gray-700">
+        Connect with me on various platforms and stay updated!
+      </p>
       <motion.div className="flex w-full h-40 justify-center items-center mx-auto">
         {SocialImg.map((item) => (
-          <div key={item.id} className="w-full h-30">
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 2 }}
+            key={item.id}
+            className="w-full h-30"
+          >
             <Link href={item.link}>
               
                 <img
@@ -30,7 +38,7 @@ const Social = () => {
                 />
               
             </Link>
-          </div>
+          </motion.div>
         ))}
       </motion.div>
       <div className="bg-purple-300 h-1 mt-6" />

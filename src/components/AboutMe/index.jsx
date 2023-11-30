@@ -22,9 +22,8 @@ const AboutMe = () => {
   }, [isInView1, isInView2]);
 
   return (
-    <div className="relative flex items-center justify-center h-25 ">
-      {/* Primer bloque de texto */}
-      <div ref={ref1} className="flex-grow text-center text-black max-w-2xl p-12 bg-gray-200 rounded-md mr-4 h-35">
+    <div id="about" ref={ref1} className="relative flex items-center justify-center h-25 ">
+      <div  className="flex-grow text-center text-black max-w-2xl p-12 bg-gray-200 rounded-md mr-4 h-35">
         <motion.div
           variants={{
             visible: { opacity: 1, y: 0 },
