@@ -51,7 +51,7 @@ const NavBar = () => {
         </Link>
       </div>
 
-      {/* Menú modal para dispositivos móviles */}
+
       {isMenuOpen && (
         <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center">
           <div className="bg-white w-full h-full p-8 rounded-md">
@@ -60,7 +60,6 @@ const NavBar = () => {
               &#x2716; {/* Icono de X */}
             </button>
 
-            {/* Enlaces del menú modal */}
             <div className="flex flex-col space-y-4 mx-auto p-4">
               <Link href="/works" className="text-black text-2xl">
                 WORKS
