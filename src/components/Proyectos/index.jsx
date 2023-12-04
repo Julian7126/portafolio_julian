@@ -1,43 +1,27 @@
+
 "use client"
+
+
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
-
-async function loadProyects() {
-  const response = await fetch('http://localhost:3000/api/proyects')
-  const data = await response.json()
-  console.log(data)
-  return data
-
-}
- 
-
-
-
-
-const Proyectos = () => {
-
-loadProyects()
-  
-
-
-
+const Proyectos = ({ work }) => {
   return (
     <>
-  
-      <div className="flex flex-col lg:flex-row items-center justify-start">
-        <div className="w-full lg:w-1/2 lg:pr-8">
-          <h2 className="text-4xl font-bold leading-8 text-black mb-4">
-            TITULO DEL PROYECTO
+      <div className="bg-purple-300 h-1 mb-8"></div>
+
+      <div className="flex flex-col lg:flex-row items-center justify-center my-8 lg:my-12 lg:items-stretch">
+        <div className="w-full lg:w-1/2 lg:pr-8 flex flex-col items-center">
+          <h2 className="text-4xl font-bold leading-8 text-black mb-4 text-center">
+            {work.name}
           </h2>
-          <p className="text-lg text-black text-opacity-80 mb-8">
-            The main objective is to provide an online platform where the
-            company can showcase its services and projects in a professional and
-            effective way.
+          <p className="text-lg text-black text-opacity-80 mb-8 text-center">
+            {work.description}
           </p>
 
-          <div className="flex items-center">
+          <div className="flex items-center justify-center w-full">
             <Image
               src="/githubb.svg"
               alt="Imagen de Git"
@@ -45,13 +29,13 @@ loadProyects()
               height={80}
               className="mr-4"
             />
-            <motion.button
-              className="bg-black text-white p-3 rounded-full hover:scale-110 transition-transform"
+            {/* <Link href={work.url}
+              className="bg-black text-white p-3 rounded-full hover:scale-110 transition-transform w-24"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              Code
-            </motion.button>
+              CODE
+            </Link> */}
           </div>
         </div>
 
@@ -61,8 +45,8 @@ loadProyects()
           whileTap={{ scale: 0.95 }}
         >
           <Image
-            src={"/fsgruposcreen.png"}
-            alt="Imagen de Git"
+            src={work.coverImage}
+            alt="Imagen del proyecto"
             width={639}
             height={377}
             className="rounded-lg"

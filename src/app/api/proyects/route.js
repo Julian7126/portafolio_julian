@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 export function GET(req, res) {
 
 
-    const data = [
+    const datanew = [
         {
             id: 1,
             name: 'FS GRUPO CONTRUCTOR',
@@ -11,7 +11,10 @@ export function GET(req, res) {
                 'The main objective is to provide an online platform where the company can showcase its services and projects in a professional and effective way.',
             status: 'Completed',
             coverImage: '/fsgruposcreen.png',
+            button:"Code",
             images: [""],
+            url:"https://github.com/Julian7126/Tama_Street_Wear/tree/main/tama-street-wear"
+
         },
         {
             id: 2,
@@ -20,7 +23,9 @@ export function GET(req, res) {
                 'This project is an e-commerce API with authentication, chat and shopping cart functionalities.',
             status: 'Completed',
             coverImage: '/apiphones.jpg',
+            button:"Code",
             images: [""],
+            url:"https://github.com/Julian7126/Back-End"
         },
         {
             id: 3,
@@ -29,7 +34,9 @@ export function GET(req, res) {
                 'The app, built with React, allows you to explore detailed information about Rick and Morty characters, episodes and locations in an interactive and visually appealing way.',
             status: 'Completed',
             coverImage: '/apirick.jpg',
+            button:"Code",
             images: [],
+            url:"https://github.com/Julian7126/Ricky-y-Morty-Ecommerce-/tree/master/heroes"
         },
         {
             id: 4,
@@ -38,10 +45,12 @@ export function GET(req, res) {
                 'Custom Shopify app. Designed for a fashion brand currently prominent on the scene, this app offers an online shopping experience that reflects the unique and modern essence of the brand.',
             status: 'Live',
             coverImage: '/cervoprincipal.jpg',
+            button:"Live",
             images: [""],
+            url:"https://cervostyle.com/"
         },
     ];
 
 
-    return NextResponse.json({ message: 'Proyectos', payload: data });
+    return NextResponse.json(datanew);
 }
