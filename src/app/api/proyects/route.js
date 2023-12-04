@@ -12,8 +12,8 @@ export function GET(req, res) {
             status: 'Completed',
             coverImage: '/fsgruposcreen.png',
             button:"Code",
-            images: [""],
-            url:"https://github.com/Julian7126/Tama_Street_Wear/tree/main/tama-street-wear"
+            images: ["/fsgrupocontructor/1.jpg" , "/fsgrupocontructor/2.jpg", "/fsgrupocontructor/3.jpg", "/fsgrupocontructor/4.jpg", "/fsgrupocontructor/5.jpg"],
+            url:"https://github.com/Julian7126/Fs_grupo_contructor"
 
         },
         {

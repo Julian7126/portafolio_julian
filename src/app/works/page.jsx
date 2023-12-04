@@ -1,5 +1,5 @@
 import Proyectos from "@/components/Proyectos";
-import React from "react";
+
 
 async function loadProyects() {
   const response = await fetch("http://localhost:3000/api/proyects");
@@ -18,7 +18,7 @@ const Work = async () => {
         </h1>
       </div>
 
-      {works.payload.map((work) => (
+      {works.map((work) => (
         <Proyectos key={work.id} work={work} />
       ))}
     </div>

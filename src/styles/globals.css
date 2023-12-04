@@ -2,7 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html ,body {
     height: 2688px;
     background: #F3F3F3;
+    width: 100vw;
+    height: 100vh;
+
   }
+
+
+.slide-in{
+  position: absolute;
+  top: 0;
+  left:0;
+  width:100%;
+  height: 100vh;
+  background-color: rgb(12, 11, 11);
+  transform-origin: bottom;
+
+}
+
+
+.slide-out{
+  position: absolute;
+  top: 0;
+  left:0;
+  width:100%;
+  height: 100vh;
+  background-color: rgb(8, 7, 7);
+  transform-origin: top;
+
+}
