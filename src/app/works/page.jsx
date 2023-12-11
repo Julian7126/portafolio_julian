@@ -5,7 +5,7 @@ dotenv.config();
 
 
 async function loadProyects() {
-  const response = await fetch("/api/proyects",{ next: { revalidate: 3600 } }) ;
+  const response = await fetch(process.env.NEXT_PUBLIC_API_URL + "/api/proyects",{ next: { revalidate: 3600 } }) ;
   const datanew = await response.json();
   console.log(datanew);
   return datanew;
