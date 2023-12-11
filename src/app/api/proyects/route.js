@@ -51,6 +51,5 @@ export function GET(req, res) {
         },
     ];
 
-    res.setHeader("Content-Type", "application/json");
     return NextResponse.json(datanew);
 }
