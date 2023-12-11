@@ -3,10 +3,11 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
+
 async function loadProyects() {
   const apiUrl = process.env.VERCEL_URL
-  ? `${process.env.VERCEL_URL}/api/proyects`
-  : process.env.NEXT_PUBLIC_API_URL + "/api/proyects";
+    ? `https://${process.env.VERCEL_URL}/api/proyects`
+    : `${process.env.NEXT_PUBLIC_API_URL}/api/proyects`;
 
   const response = await fetch(apiUrl);
   const datanew = await response.json();
