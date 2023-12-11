@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 async function loadProyects() {
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL + "api/proyects";
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL + "/api/proyects";
   const response = await fetch(apiUrl);
   const datanew = await response.json();
   console.log(datanew);
