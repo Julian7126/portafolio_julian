@@ -1,6 +1,12 @@
 import { NextResponse } from "next/server";
 
 export function GET(req, res) {
+
+
+    res.setHeader("Cache-Control", "s-maxage=10, stale-while-revalidate");
+
+
+
     const datanew = [
         {
             id: 1,
