@@ -13,7 +13,7 @@ const Proyectos = ({ work }) => {
   const sliderSettings = {
     dots: true,
     infinite: true,
-    speed: 16000,
+    speed: 15000,
     slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
