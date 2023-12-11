@@ -3,6 +3,9 @@ import NavBar from '../components/NavBar/index.jsx';
 import Head from 'next/head';
 import { DM_Sans } from 'next/font/google'
 
+
+export const revalidate = 3600 
+
 export const metadata = {
   title: "Julian Bischoff",
 };
