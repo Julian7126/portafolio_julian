@@ -1,8 +1,11 @@
 import Proyectos from "@/components/Proyectos";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 
 async function loadProyects() {
-  const response = await fetch("api/proyects");
+  const response = await fetch(`${process.env.API_URL}/api/proyects`);
   const datanew = await response.json();
   console.log(datanew);
   return datanew;
