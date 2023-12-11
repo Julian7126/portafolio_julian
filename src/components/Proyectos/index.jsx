@@ -13,11 +13,11 @@ const Proyectos = ({ work }) => {
   const sliderSettings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 16000,
     slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000, 
+    autoplaySpeed: 200, 
   };
 
   return (

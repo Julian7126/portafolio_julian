@@ -11,9 +11,9 @@ export function GET(req, res) {
                 'The main objective is to provide an online platform where the company can showcase its services and projects in a professional and effective way.',
             status: 'Completed',
             coverImage: '/fsgruposcreen.png',
-            button:"Code",
+            button:"Web",
             images: ["/fsgrupocontructor/1.jpg" , "/fsgrupocontructor/2.jpg", "/fsgrupocontructor/3.jpg", "/fsgrupocontructor/4.jpg", "/fsgrupocontructor/5.jpg"],
-            url:"https://github.com/Julian7126/Fs_grupo_contructor"
+            url:"https://www.fsgrupoconstructor.com/"
 
         },
         {
@@ -23,9 +23,9 @@ export function GET(req, res) {
                 'This project is an e-commerce API with authentication, chat and shopping cart functionalities.',
             status: 'Completed',
             coverImage: '/apiphones.jpg',
-            button:"Code",
+            button:"Web",
             images: [""],
-            url:"https://github.com/Julian7126/Back-End"
+            url:"https://back-end-production-4e54.up.railway.app/"
         },
         {
             id: 3,
@@ -45,7 +45,7 @@ export function GET(req, res) {
                 'Custom Shopify app. Designed for a fashion brand currently prominent on the scene, this app offers an online shopping experience that reflects the unique and modern essence of the brand.',
             status: 'Live',
             coverImage: '/cervoprincipal.jpg',
-            button:"Live",
+            button:"Web",
             images: [""],
             url:"https://cervostyle.com/"
         },
