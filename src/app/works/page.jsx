@@ -11,6 +11,10 @@ async function loadProyects() {
   return datanew;
 }
 
+
+
+
+
 const Work = async () => {
   const works = await loadProyects();
   return (
