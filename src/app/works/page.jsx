@@ -2,7 +2,7 @@ import Proyectos from "@/components/Proyectos";
 
 
 async function loadProyects() {
-  const response = await fetch("http://127.0.0.1:3000/api/proyects");
+  const response = await fetch("api/proyects");
   const datanew = await response.json();
   console.log(datanew);
   return datanew;
