@@ -1,18 +1,9 @@
 import Proyectos from "@/components/Proyectos";
-import dotenv from "dotenv";
+import ProyectsData from "../../../data.js";
 
-dotenv.config();
-
-
-async function loadProyects() {
-  const response = await fetch("http://127.0.0.1:3000/api/proyects");
-  const datanew = await response.json();
-  console.log(datanew);
-  return datanew;
-}
 
 const Work = async () => {
-  const works = await loadProyects();
+  const works = ProyectsData;
   return (
     <div className="container mx-auto px-4 h-[2000px]">
       <div className="my-16 m-0 h-1">
@@ -27,5 +18,7 @@ const Work = async () => {
     </div>
   );
 };
+
+
 
 export default Work;
