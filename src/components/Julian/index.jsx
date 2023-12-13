@@ -51,7 +51,7 @@ const Julian = () => {
     transition={{ duration: 2 }}
     className="text-3xl sm:text-6xl font-bold p-4 sm:p-8 sm:mb-10"
   >
-    Hi, I'm Julian Bischoff
+    Hi, Im Julian Bischoff
   </motion.h1>
 
   <h1 className="text-lg sm:text-3xl mb-2 p-2 sm:p-4 text-purple-300">
