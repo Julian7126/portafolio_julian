@@ -42,7 +42,7 @@ const ProyectsData = [
       status: 'Completed',
       coverImage: '/apirick.jpg',
       button: 'Code',
-      images: ['/Rick/1.jpg', '/Rick/2.jpg', '/Rick/3.jpg', '/Rick/4.jpg'],
+      images: ['/Rick/1.jpg', '/Rick/2.jpg','/Rick/4.jpg'],
       url: 'https://github.com/Julian7126/Ricky-y-Morty-Ecommerce-/tree/master/heroes',
     },
     {

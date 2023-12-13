@@ -22,8 +22,8 @@ const AboutMe = () => {
   }, [isInView1, isInView2]);
 
   return (
-    <div id="about" ref={ref1} className="relative flex items-center justify-center h-25 ">
-      <div  className="flex-grow text-center text-black max-w-2xl p-12 bg-gray-200 rounded-md mr-4 h-35">
+    <div id="about" ref={ref1} className="relative flex items-center justify-center h-38  ">
+      <div  className="flex-grow text-center text-black max-w-2xl p-12 bg-gray-200 rounded-md mr-4 h-35 ">
         <motion.div
           variants={{
             visible: { opacity: 1, y: 0 },
@@ -33,7 +33,7 @@ const AboutMe = () => {
           animate={mainControls}
           transition={{ duration: 0.5, delay: 0.25 }}
         >
-          <motion.h2 className="text-2xl">
+          <motion.h2 className="text-2xl  ">
             A passionate web developer with a mission:
             
              to make technology as fun as it is functional.
@@ -51,7 +51,7 @@ const AboutMe = () => {
           initial="hidden"
           animate={mainControls}
         >
-          <h2 className="text-2xl">
+          <h2 className="text-2xl ">
             I love being able to create new things, face new challenges, and grow every day in this beautiful world of artists.
           </h2>
         </motion.div>

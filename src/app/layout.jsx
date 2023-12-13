@@ -25,7 +25,7 @@ const Layout = ({children}) => {
         <Head>
           <title>{metadata.title}</title>
         </Head>
-        <body>
+        <body >
           <NavBar />
           {children}
         </body>

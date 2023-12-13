@@ -32,7 +32,7 @@ const Julian = () => {
 
         {/* Sección del texto y la flecha */}
         <motion.div
-          className=" w-1/8 flex text-7xl mt-10 text-purple-300 "
+          className=" w-1/8 text-7xl mt-10 text-purple-300  hidden md:flex"
           //animacion para la flecha que venga de arriba}
           initial={{ opacity: 0, y: -350 }}
           animate={{ opacity: 1, y: -60 }}
@@ -40,29 +40,39 @@ const Julian = () => {
         >
           &#8595;
         </motion.div>
-        <div className="w-full sm:w-1/2 ml-0 sm:ml-4">
-          {/* Título y texto */}
-          <motion.h1
-            initial={{ opacity: 0, x: 350 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 2 }}
-            className="text-4xl sm:text-8xl font-bold mb-2 justify-between p-2 sm:p-12"
-          >
-            Hi, Im Julian Bischoff
-          </motion.h1>
-          <p className="text-xl sm:text-2xl mb-4 justify-center p-2 sm:p-10 m-5">
-            Welcome to my digital corner! Specialized for the creation of
-            successful web sites.
-          </p>
-          <motion.button
-            className="bg-black text-white p-4 rounded-full hover:scale-110 transition-transform ml-12"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={downloadPDF}
-          >
-            Download CV
-          </motion.button>
-        </div>
+
+
+
+        <div className="w-full sm:w-1/2 ml-0 sm:ml-4 text-center sm:text-left">
+  {/* Título y texto */}
+  <motion.h1
+    initial={{ opacity: 0, x: 350 }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{ duration: 2 }}
+    className="text-3xl sm:text-6xl font-bold p-4 sm:p-8 sm:mb-10"
+  >
+    Hi, I'm Julian Bischoff
+  </motion.h1>
+
+  <h1 className="text-lg sm:text-3xl mb-2 p-2 sm:p-4 text-purple-300">
+    Full Stack Developer
+  </h1>
+
+  <p className="text-lg sm:text-xl mb-2 p-2 sm:p-4">
+    Welcome to my digital corner! Specialized for the creation of
+    successful web sites.
+  </p>
+  
+  <motion.button
+    className="bg-black text-white p-4 rounded-full hover:scale-105 transition-transform ml-9 m-4 sm:mt-0"
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+    onClick={downloadPDF}
+  >
+    Download CV
+  </motion.button>
+</div>
+
       </div>
     </>
   );

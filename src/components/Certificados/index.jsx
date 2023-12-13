@@ -24,7 +24,8 @@ const Certificados = () => {
     { id: 1, title: "Web Development", src: "/desarrolloweb.jpg", link: "https://latam.coderhouse.com/certificados/62fecc40cc367b0024226179?lang=es" },
     { id: 2, title: "JavaScript", src: "/javascript.jpg", link: "https://latam.coderhouse.com/certificados/633b61418453fd000e9f73c3?lang=es" },
     { id: 3, title: "React.js", src: "/react.jpg", link: "https://www.coderhouse.es/certificados/63a6efdfc5708d000e6de53f" },
-    { id: 4, title: "Back-end", src: "/react.jpg", link: "https://example.com/backend" },
+    { id: 4, title: "Back-end", src: "/back-end.jpg", link: "https://latam.coderhouse.com/certificados/6579706c7f710a5ccdd142e8?lang=es" },
+    { id: 5, title: "Full Stack", src: "/certificado-carrera.jpg", link: "https://latam.coderhouse.com/certificados/6579706c7f710a7047d142ff?lang=es" },
   ];
 
   return (

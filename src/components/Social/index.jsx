@@ -22,25 +22,22 @@ const Social = () => {
         Connect with me on various platforms and stay updated!
       </p>
       <motion.div className="flex w-full h-40 justify-center items-center mx-auto">
-        {SocialImg.map((item) => (
-          <motion.div
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 2 }}
-            key={item.id}
-            className="w-full h-30"
-          >
-            <Link href={item.link}>
-              
-                <img
-                  src={item.src}
-                  alt={`Social ${item.id}`}
-                  className="w-full max-w-60 h-20"
-                />
-              
-            </Link>
-          </motion.div>
-        ))}
+    {SocialImg.map((item) => (
+      <motion.div
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 2 }}
+        key={item.id}
+        className="w-full h-30 "
+      >
+        <Link href={item.link}>
+          <img
+            src={item.src}
+            alt={`Social ${item.id}`}
+            className="w-full max-w-60 h-30 sm:max-w-32 sm:h-14  "       />
+        </Link>
       </motion.div>
+    ))}
+  </motion.div>
       <div className="bg-purple-300 h-1 mt-6" />
     </>
   );
