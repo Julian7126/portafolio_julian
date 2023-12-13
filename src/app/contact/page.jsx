@@ -1,3 +1,25 @@
+import React from 'react'
+
+const Contact = () => {
+  return (
+    <div>Contact</div>
+  )
+}
+
+export default Contact
+
+
+
+
+
+
+
+
+
+
+
+
+
 // "use client";
 // import React, { useState } from "react";
 // import { motion } from "framer-motion";
