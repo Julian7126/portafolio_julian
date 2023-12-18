@@ -60,8 +60,9 @@ const Proyectos = ({ work }) => {
             <div
               className="w-full p-2 md:p-4 lg:p-6 rounded-lg shadow-md"
               style={{
-                background: "#000",
-                padding: "10px",
+                background: "rgba(0, 0, 0, 0.05)|",
+                padding: "5px",
+                height: "105px"
               }}
             >
               <Slider
@@ -72,7 +73,7 @@ const Proyectos = ({ work }) => {
                 centerPadding="30px"
               >
                 {work.images.map((image, index) => (
-                  <div key={index} className="rounded-lg overflow-hidden">
+                  <div key={index} className="rounded-lg oerflow-hivdden">
                     <Image
                       src={image}
                       alt={`Imagen ${index}`}

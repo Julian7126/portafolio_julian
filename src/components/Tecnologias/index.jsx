@@ -34,27 +34,27 @@ const Tecnologias = () => {
     { id: 18, src: './nodemon.svg' },
    
   ];
-
-  const settings = {
+  const commonSettings = {
     infinite: true,
     speed: 10000,
     slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 0.5, 
+    autoplaySpeed: 0.5,
+    arrows: false, // Oculta las flechas
     responsive: [
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 1,
+          slidesToScroll: 2,
         },
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
+          slidesToScroll: 2,
         },
       },
       {
@@ -67,12 +67,67 @@ const Tecnologias = () => {
     ],
   };
 
+  const settings = {
+    ...commonSettings,
+    className: "mx-auto p-5 mt-10",
+  };
 
   const settingsSecondCarousel = {
-    ...settings,
-    rtl: true, 
+    ...commonSettings,
+    className: "mx-auto mt-10",
+    rtl: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
-  
+
+  const settingsThirdCarousel = {
+    ...commonSettings,
+    className: "mx-auto p-5",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
 
   return (
     <div className="w-full p-5">
@@ -81,7 +136,7 @@ const Tecnologias = () => {
       <h2 className="text-center mb-4 text-3xl p-2 sm:text-4xl md:text-5xl lg:text-4xl">Technologies Skills</h2>
 
       {/* Primer Carrusel */}
-      <Slider {...settings} className="mx-auto p-5 mt-10">
+      <Slider {...settings}>
         {carouselData1.map((item) => (
           <div key={item.id} className="carousel-column">
             <img src={item.src} alt={`Tecnologia ${item.id}`} className="mx-auto max-w-full h-auto max-h-32" />
@@ -92,7 +147,7 @@ const Tecnologias = () => {
       <div className="my-8" />
 
       {/* Segundo Carrusel */}
-      <Slider {...settingsSecondCarousel} className="mx-auto mt-10">
+      <Slider {...settingsSecondCarousel}>
         {carouselData2.map((item) => (
           <div key={item.id} className="carousel-column">
             <img src={item.src} alt={`Tecnologia ${item.id}`} className="mx-auto max-w-full h-auto max-h-32" />
@@ -103,7 +158,7 @@ const Tecnologias = () => {
       <div className="my-8" />
 
       {/* Tercer Carrusel */}
-      <Slider {...settings} className="mx-auto p-5">
+      <Slider {...settingsThirdCarousel}>
         {carouselData3.map((item) => (
           <div key={item.id} className="carousel-column">
             <img src={item.src} alt={`Tecnologia ${item.id}`} className="mx-auto max-w-full h-auto max-h-32" />
@@ -113,17 +168,9 @@ const Tecnologias = () => {
 
       <h2 className="text-center mt-4 text-3xl p-5 sm:text-4xl md:text-5xl lg:text-2xl">Specialized in covering many areas</h2>
       <br />
-     
-      <div className="bg-purple-300 h-1 " />
-          
-          
-
-
-
+      <div className="bg-purple-300 h-1" />
     </div>
-    
   );
 };
-
 
 export default Tecnologias;

@@ -1,6 +1,7 @@
 "use client";
 import {motion} from "framer-motion";
 import Link from "next/link";
+import Image from 'next/image';
 
 const Social = () => {
   const SocialImg = [
@@ -30,10 +31,13 @@ const Social = () => {
         className="w-full h-30 "
       >
         <Link href={item.link}>
-          <img
-            src={item.src}
-            alt={`Social ${item.id}`}
-            className="w-full max-w-60 h-30 sm:max-w-32 sm:h-14  "       />
+        <Image
+          src={item.src}
+          alt={`Social ${item.id}`}
+          width={20}
+          height={10}
+          className="w-full h-30 sm:max-w-10 sm:h-14 "
+  />
         </Link>
       </motion.div>
     ))}

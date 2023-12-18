@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { motion, useInView, useAnimation, easeIn } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 
@@ -22,8 +22,9 @@ const AboutMe = () => {
   }, [isInView1, isInView2]);
 
   return (
-    <div id="about" ref={ref1} className="relative flex items-center justify-center h-38  ">
-      <div  className="flex-grow text-center text-black max-w-2xl p-12 bg-gray-200 rounded-md mr-4 h-35 ">
+    <div id="about" ref={ref1} className="relative flex flex-col lg:flex-row items-center justify-center h-auto">
+      {/* Primer bloque de texto */}
+      <div className="lg:w-1/2 p-6 bg-gray-200 rounded-md mb-4 lg:mr-4">
         <motion.div
           variants={{
             visible: { opacity: 1, y: 0 },
@@ -33,16 +34,14 @@ const AboutMe = () => {
           animate={mainControls}
           transition={{ duration: 0.5, delay: 0.25 }}
         >
-          <motion.h2 className="text-2xl  ">
-            A passionate web developer with a mission:
-            
-             to make technology as fun as it is functional.
+          <motion.h2 className="text-xl lg:text-2xl">
+            A passionate web developer with a mission to make technology as fun as it is functional.
           </motion.h2>
         </motion.div>
       </div>
 
       {/* Segundo bloque de texto */}
-      <div ref={ref2} className="flex-grow text-center text-black max-w-2xl p-8 bg-gray-200 rounded-md h-35">
+      <div ref={ref2} className="lg:w-1/2 p-6 bg-gray-200 rounded-md  -mt-3.5">
         <motion.div
           variants={{
             visible: { opacity: 1, y: 0 },
@@ -51,7 +50,7 @@ const AboutMe = () => {
           initial="hidden"
           animate={mainControls}
         >
-          <h2 className="text-2xl ">
+          <h2 className="text-xl lg:text-2xl">
             I love being able to create new things, face new challenges, and grow every day in this beautiful world of artists.
           </h2>
         </motion.div>
@@ -84,25 +83,3 @@ const AboutMe = () => {
 };
 
 export default AboutMe;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

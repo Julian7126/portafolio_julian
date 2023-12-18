@@ -11,15 +11,6 @@ export default Contact
 
 
 
-
-
-
-
-
-
-
-
-
 // "use client";
 // import React, { useState } from "react";
 // import { motion } from "framer-motion";
