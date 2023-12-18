@@ -26,15 +26,19 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
-    emailjs.sendForm( process.env.IdServerEmail , process.env.IdTemplateEmail , form.current, process.env.PublicKeyEmail)
+    emailjs.sendForm(
+      process.env.IdServerEmail,
+      process.env.IdTemplateEmail,
+      form.current,
+      process.env.PublicKeyEmail
+    )
       .then((result) => {
         console.log(result.text);
-        toast.success("Email sended!")
-       
+        toast.success("Email enviado exitosamente");
       })
       .catch((error) => {
-        toast.error("Error sending email")
+        console.error(error.text);
+        toast.error("Error al enviar el email");
       });
   };
 
