@@ -23,62 +23,63 @@ const AboutMe = () => {
 
   return (
     <div id="about" ref={ref1} className="relative flex flex-col lg:flex-row items-center justify-center h-auto">
-      {/* Primer bloque de texto */}
-      <div className="lg:w-1/2 p-6 bg-gray-200 rounded-md mb-4 lg:mr-4">
-        <motion.div
-          variants={{
-            visible: { opacity: 1, y: 0 },
-            hidden: { opacity: 0, y: 75 },
-          }}
-          initial="hidden"
-          animate={mainControls}
-          transition={{ duration: 0.5, delay: 0.25 }}
-        >
-          <motion.h2 className="text-xl lg:text-2xl">
-            A passionate web developer with a mission to make technology as fun as it is functional.
-          </motion.h2>
-        </motion.div>
-      </div>
-
-      {/* Segundo bloque de texto */}
-      <div ref={ref2} className="lg:w-1/2 p-6 bg-gray-200 rounded-md  -mt-3.5">
-        <motion.div
-          variants={{
-            visible: { opacity: 1, y: 0 },
-            hidden: { opacity: 0, y: 75 },
-          }}
-          initial="hidden"
-          animate={mainControls}
-        >
-          <h2 className="text-xl lg:text-2xl">
-            I love being able to create new things, face new challenges, and grow every day in this beautiful world of artists.
-          </h2>
-        </motion.div>
-      </div>
-
-      {/* Bloque de animación de slide */}
+    {/* Primer bloque de texto */}
+    <div className="lg:w-1/2 p-6 md:p-9 bg-gray-200 rounded-md mb-4 lg:mr-4 md:mb-0">
       <motion.div
         variants={{
-          hidden: { right: "100%" },
-          visible: { left: "0%" },
+          visible: { opacity: 1, y: 0 },
+          hidden: { opacity: 0, y: 75 },
         }}
-        initial="visible"
-        animate={slideControls}
-        transition={{ duration: 0.5, ease: easeIn }}
-        style={{
-          marginTop: "-20px",
-          height: 200,
-          position: "absolute",
-          top: 4,
-          bottom: 4,
-          left: 0,
-          right: 0,
-          background: "#E6E6FA",
-          zIndex: 25,
-          borderRadius: "12px",
-        }}
-      />
+        initial="hidden"
+        animate={mainControls}
+        transition={{ duration: 0.5, delay: 0.25 }}
+      >
+        <motion.h2 className="text-xl lg:text-2xl text-center md:text-left">
+          A passionate web developer with a mission to make technology as fun as it is functional.
+        </motion.h2>
+      </motion.div>
     </div>
+  
+    {/* Segundo bloque de texto */}
+    <div ref={ref2} className="lg:w-1/2 p-6 md:p-5 bg-gray-200 rounded-md -mt-5 md:mt-0">
+      <motion.div
+        variants={{
+          visible: { opacity: 1, y: 0 },
+          hidden: { opacity: 0, y: 75 },
+        }}
+        initial="hidden"
+        animate={mainControls}
+      >
+        <h2 className="text-xl lg:text-2xl text-center md:text-left">
+          I love being able to create new things, face new challenges, and grow every day in this beautiful world of artists.
+        </h2>
+      </motion.div>
+    </div>
+  
+    {/* Bloque de animación de slide */}
+    <motion.div
+      variants={{
+        hidden: { right: "100%" },
+        visible: { left: "0%" },
+      }}
+      initial="visible"
+      animate={slideControls}
+      transition={{ duration: 0.5, ease: easeIn }}
+      style={{
+        marginTop: "-20px",
+        height: "200px",
+        position: "absolute",
+        top: "4px",
+        bottom: "4px",
+        left: "0",
+        right: "0",
+        background: "#E6E6FA",
+        zIndex: 25,
+        borderRadius: "12px",
+      }}
+    />
+  </div>
+  
   );
 };
 

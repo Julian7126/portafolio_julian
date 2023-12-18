@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@react-three/fiber": "^8.15.11",
     "@splinetool/react-spline": "^2.2.6",
     "axios": "^1.6.2",
@@ -23,6 +24,7 @@
     "react-dom": "^18",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
+    "sonner": "^1.2.4",
     "three": "^0.158.0"
   },
   "devDependencies": {
