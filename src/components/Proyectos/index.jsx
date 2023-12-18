@@ -62,7 +62,7 @@ const Proyectos = ({ work }) => {
               style={{
                 background: "rgba(0, 0, 0, 0.05)|",
                 padding: "5px",
-                height: "105px"
+                height: "150px"
               }}
             >
               <Slider
