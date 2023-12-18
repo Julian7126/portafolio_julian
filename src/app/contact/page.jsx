@@ -30,7 +30,7 @@ const Contact = () => {
       process.env.IdServerEmail,
       process.env.IdTemplateEmail,
       form.current,
-      process.env.PublicKeyEmail
+     "pYgGfqlNJz6gYsyun"
     )
       .then((result) => {
         console.log(result.text);
