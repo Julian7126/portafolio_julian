@@ -4,7 +4,10 @@ import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import { Toaster, toast } from 'sonner'
+import dotenv from 'dotenv'
 
+
+dotenv.config()
 
 
 
@@ -24,7 +27,7 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_89s439s', 'template_kcozm9b', form.current, 'pYgGfqlNJz6gYsyun')
+    emailjs.sendForm( process.env.IdServerEmail , process.env.IdTemplateEmail , form.current, process.env.PublicKeyEmail)
       .then((result) => {
         console.log(result.text);
         toast.success("Email sended!")
