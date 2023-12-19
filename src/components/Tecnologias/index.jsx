@@ -41,7 +41,7 @@ const Tecnologias = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 0.5,
-    arrows: false, // Oculta las flechas
+    arrows: false, 
     responsive: [
       {
         breakpoint: 1024,
@@ -55,13 +55,16 @@ const Tecnologias = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
+          autoplaySpeed: 1000
         },
       },
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
+          speed: 500,
+          autoplaySpeed: 200
         },
       },
     ],
@@ -89,13 +92,17 @@ const Tecnologias = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
+          speed: 500,
+          autoplaySpeed: 200
         },
       },
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
+          speed: 500,
+          autoplaySpeed: 200
         },
       },
     ],
@@ -117,13 +124,17 @@ const Tecnologias = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
+          speed: 500,
+          autoplaySpeed: 200
         },
       },
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
+          speed: 500,
+          autoplaySpeed: 200
         },
       },
     ],

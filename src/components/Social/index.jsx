@@ -28,15 +28,15 @@ const Social = () => {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 2 }}
         key={item.id}
-        className="w-full h-30 "
+        className="w-full h-30 sm-w-1/6 sm:h-4 sm: m-5 "
       >
-        <Link href={item.link}>
+        <Link href={item.link} target="_blank" >
         <Image
           src={item.src}
           alt={`Social ${item.id}`}
           width={20}
           height={10}
-          className="w-full h-30 sm:max-w-10 sm:h-14 "
+          className="w-full h-14  "
   />
         </Link>
       </motion.div>

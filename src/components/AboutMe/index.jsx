@@ -23,38 +23,41 @@ const AboutMe = () => {
 
   return (
     <div id="about" ref={ref1} className="relative flex flex-col lg:flex-row items-center justify-center h-auto">
-    {/* Primer bloque de texto */}
-    <div className="lg:w-1/2 p-6 md:p-9 bg-gray-200 rounded-md mb-4 lg:mr-4 md:mb-0">
-      <motion.div
-        variants={{
-          visible: { opacity: 1, y: 0 },
-          hidden: { opacity: 0, y: 75 },
-        }}
-        initial="hidden"
-        animate={mainControls}
-        transition={{ duration: 0.5, delay: 0.25 }}
-      >
-        <motion.h2 className="text-xl lg:text-2xl text-center md:text-left">
-          A passionate web developer with a mission to make technology as fun as it is functional.
-        </motion.h2>
-      </motion.div>
-    </div>
-  
-    {/* Segundo bloque de texto */}
-    <div ref={ref2} className="lg:w-1/2 p-6 md:p-5 bg-gray-200 rounded-md -mt-5 md:mt-0">
-      <motion.div
-        variants={{
-          visible: { opacity: 1, y: 0 },
-          hidden: { opacity: 0, y: 75 },
-        }}
-        initial="hidden"
-        animate={mainControls}
-      >
-        <h2 className="text-xl lg:text-2xl text-center md:text-left">
-          I love being able to create new things, face new challenges, and grow every day in this beautiful world of artists.
-        </h2>
-      </motion.div>
-    </div>
+    <div className="lg:flex">
+  {/* Primer bloque de texto */}
+  <div className="lg:w-1/2 xl:p-5 bg-gray-200 rounded-md mb-4 lg:mr-2 md:mb-0">
+    <motion.div
+      variants={{
+        visible: { opacity: 1, y: 0 },
+        hidden: { opacity: 0, y: 75 },
+      }}
+      initial="hidden"
+      animate={mainControls}
+      transition={{ duration: 0.5, delay: 0.25 }}
+    >
+      <motion.h2 className="text-xl lg:text-2xl text-center md:text-left">
+        A passionate web developer with a mission to make technology as fun as it is functional.
+      </motion.h2>
+    </motion.div>
+  </div>
+
+  {/* Segundo bloque de texto */}
+  <div ref={ref2} className="lg:w-1/2 p-5 bg-gray-200 rounded-md mt-4 lg:ml-2 md:mt-0">
+    <motion.div
+      variants={{
+        visible: { opacity: 1, y: 0 },
+        hidden: { opacity: 0, y: 75 },
+      }}
+      initial="hidden"
+      animate={mainControls}
+    >
+      <h2 className="text-xl lg:text-2xl text-center md:text-left">
+        I love being able to create new things, face new challenges, and grow every day in this beautiful world of artists.
+      </h2>
+    </motion.div>
+  </div>
+</div>
+
   
     {/* Bloque de animación de slide */}
     <motion.div
@@ -67,7 +70,7 @@ const AboutMe = () => {
       transition={{ duration: 0.5, ease: easeIn }}
       style={{
         marginTop: "-20px",
-        height: "200px",
+        height: "600px",
         position: "absolute",
         top: "4px",
         bottom: "4px",

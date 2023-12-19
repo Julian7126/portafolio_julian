@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { Suspense, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Spline from '@splinetool/react-spline';
+
 
 
 const NavBar = () => {
@@ -70,7 +70,7 @@ const NavBar = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center"
+            className="fixed top-0 left-0 bottom-0  w-full h-full bg-black "
             onClick={toggleMenu}
             style={{ zIndex: 1000 }}
           >
@@ -78,69 +78,50 @@ const NavBar = () => {
               initial={{ y: -50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -50, opacity: 0 }}
-              className="bg-black w-full h-full p-8 rounded-sm flex flex-col items-start justify-between"
+              className="bg-black w-full h-full p-2 rounded-sm flex flex-col "
               onClick={(e) => e.stopPropagation()}
               style={{ position: "absolute", zIndex: 1000 }}
             >
               {/* Botón para cerrar el menú */}
               <button
                 onClick={toggleMenu}
-                className="text-white text-2xl focus:outline-none self-end"
+                className="text-white text-5xl focus:outline-none self-end mr-5 mt-2"
               >
                 &#x2716; {/* Icono de X */}
               </button>
-              <motion.div
-                className="text-black-200 text-2xl w-full h-[200px] flex items-center justify-center rounded-lg shadow-md p-4 bg-gradient-to-r from-violet-200 via-violet-500 to-violet-800"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{
-                  opacity: 1,
-                  scale: 1,
-                  x: 0,
-                  y: 0,
-                  rotate: 0,
-                }}
-                transition={{
-                  type: "spring",
-                  stiffness: 260,
-                  damping: 20,
-                }}
-              >
-                <Suspense fallback={<div>Loading...</div>} >
-                  <Spline scene="https://prod.spline.design/kqQrUhfnyhg7Zcnj/scene.splinecode" />
-                </Suspense>
-              </motion.div>
-
+        
+             
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2 }}
-                className="grid gap-4"
+                className="grid gap-28 justify-center items-center mt-20"
               >
                 <Link
                   onClick={toggleMenu}
                   href="/"
-                  className="text-white text-2xl"
+                  className="text-white text-5xl"
                 >
                   HOME
                 </Link>
                 <Link
                   onClick={toggleMenu}
                   href="/works"
-                  className="text-white text-2xl"
+                  className="text-white text-5xl"
                 >
                   WORKS
                 </Link>
                 <Link
                   onClick={toggleMenu}
                   href="/#aboutme"
-                  className="text-white text-2xl"
+                  className="text-white text-5xl"
                 >
                   ABOUT ME
                 </Link>
                 <Link
                   onClick={toggleMenu}
                   href="/contact"
-                  className="text-white text-2xl"
+                  className="text-white text-5xl"
                 >
                   CONTACT
                 </Link>

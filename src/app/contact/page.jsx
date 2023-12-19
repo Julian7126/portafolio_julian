@@ -5,6 +5,8 @@ import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import { Toaster, toast } from 'sonner'
 import dotenv from 'dotenv'
+import Social from '@/components/Social';
+import Saludo from '@/components/Saludo';
 
 
 dotenv.config()
@@ -40,14 +42,15 @@ const Contact = () => {
 
   return (
     <>
+    <Saludo/>
         <Toaster/>
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex justify-center items-center  -mt-20 min-h-screen">
       <motion.form
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -50 }}
         transition={{ duration: 0.5 }}
-        className="flex flex-wrap bg-gradient-to-br from-gray-200 to-gray-100 p-8 rounded-lg shadow-md"
+        className="w-full xl:2/3 p-2 shadow-md h-full "
         onSubmit={sendEmail}
         ref={form}
       >
@@ -109,6 +112,9 @@ const Contact = () => {
         </div>
       </motion.form>
     </div>
+
+    <Social />
+
     </>
   );
 };
