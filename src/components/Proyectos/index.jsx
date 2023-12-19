@@ -58,11 +58,11 @@ const Proyectos = ({ work }) => {
             whileTap={{ scale: 0.95 }}
           >
             <div
-              className="w-full p-2 md:p-4 lg:p-6 rounded-lg shadow-md"
+              className="w-full  md:p-4 lg:p-6 rounded-lg shadow-md"
               style={{
-                background: "rgba(0, 0, 0, 0.05)|",
+                background: "rgba(0, 0, 0, 0.05)",
                 padding: "5px",
-                height: "150px"
+    
               }}
             >
               <Slider
