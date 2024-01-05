@@ -35,7 +35,7 @@ const AboutMe = () => {
       animate={mainControls}
       transition={{ duration: 0.5, delay: 0.25 }}
     >
-      <motion.h2 className="text-xl lg:text-2xl text-center md:text-left">
+      <motion.h2 className="text-xl lg:text-2xl text-center md:text-center mt-4 mb-1leading-6" >
         A passionate web developer with a mission to make technology as fun as it is functional.
       </motion.h2>
     </motion.div>
