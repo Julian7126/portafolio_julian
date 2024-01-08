@@ -26,6 +26,7 @@ const Certificados = () => {
     { id: 3, title: "React.js", src: "/react.jpg", link: "https://www.coderhouse.es/certificados/63a6efdfc5708d000e6de53f" },
     { id: 4, title: "Back-end", src: "/back-end.jpg", link: "https://latam.coderhouse.com/certificados/6579706c7f710a5ccdd142e8?lang=es" },
     { id: 5, title: "Full Stack", src: "/certificado-carrera.jpg", link: "https://latam.coderhouse.com/certificados/6579706c7f710a7047d142ff?lang=es" },
+    { id: 6, title: "Next14", src: "/next14Certificado.jpg", link: "https://platzi.com/p/julibischoff/curso/8847-nextjs-14/diploma/detalle/"}
   ];
 
   return (
@@ -45,7 +46,7 @@ const Certificados = () => {
       initial="hidden"
       animate={mainControls}
       transition={{ duration: 1 , delay: 0.1 }}
-          className  ="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-20 items-center w-full border-6  rounded-md"
+          className  ="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-15 sm:gap-5 items-center w-full border-6  rounded-md"
       
         >  
           {certificadosData.map((item) => (
@@ -58,13 +59,17 @@ const Certificados = () => {
               transition={{ duration: 0.5 }}
               className="max-w-full overflow-hidden shadow-lg rounded-md flex flex-col items-center my-8 m-3 bg-gray-200"
             >
+             <Link href={item.link} className="block w-full">
+             
               <Image
+               
                 src={item.src}
                 alt={item.title}
                 width={ 400}
                 height={100}
                 className="mx-auto w-full h-64 object-cover"
               />
+             </Link> 
               <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2">{item.title}</div>
                 <Link href={item.link}>

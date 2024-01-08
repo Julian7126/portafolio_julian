@@ -22,7 +22,7 @@ const AboutMe = () => {
   }, [isInView1, isInView2]);
 
   return (
-    <div id="about" ref={ref1} className="relative flex flex-col lg:flex-row items-center justify-center h-auto">
+    <div id="about" ref={ref1} className="relative flex flex-col lg:flex-row items-center justify-center h-auto md:p-14 ">
     <div className="lg:flex">
   {/* Primer bloque de texto */}
   <div className="lg:w-1/2 xl:p-5 bg-gray-200 rounded-md mb-4 lg:mr-2 md:mb-0">

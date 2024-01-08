@@ -18,6 +18,7 @@ const Work = () => {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
+      transition={{ delay: 0.5 }} // Ajusta el valor de retraso según sea necesario
     >
       <motion.div className="my-16 m-0" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
         <h1 className="text-2xl md:text-1xl lg:text-1xl text-left h-2">A little bit about my projects</h1>
@@ -28,6 +29,7 @@ const Work = () => {
           <Proyectos work={work} />
         </motion.div>
       ))}
+      <br />
     </motion.div>
   );
 };

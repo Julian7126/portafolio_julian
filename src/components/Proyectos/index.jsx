@@ -61,8 +61,7 @@ const Proyectos = ({ work }) => {
               className="w-full  md:p-4 lg:p-6 rounded-lg shadow-md"
               style={{
                 background: "rgba(0, 0, 0, 0.05)",
-                padding: "5px",
-    
+                padding: "10px",
               }}
             >
               <Slider
@@ -71,17 +70,24 @@ const Proyectos = ({ work }) => {
                 dots={false}
                 centerMode={true}
                 centerPadding="30px"
+                className="w-full gap-4 "
               >
                 {work.images.map((image, index) => (
-                  <div key={index} className="rounded-lg oerflow-hivdden">
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 2 * index }} // Ajusta el valor de retraso según sea necesario
+                    className="rounded-lg oerflow-hivdden "
+                  >
                     <Image
                       src={image}
                       alt={`Imagen ${index}`}
                       width={300}
-                      height={200}
-                      className="rounded-lg"
+                      height={100}
+                      className="rounded-lg gap-2"
                     />
-                  </div>
+                  </motion.div>
                 ))}
               </Slider>
             </div>
@@ -108,5 +114,3 @@ const Proyectos = ({ work }) => {
 };
 
 export default Proyectos;
-
-
